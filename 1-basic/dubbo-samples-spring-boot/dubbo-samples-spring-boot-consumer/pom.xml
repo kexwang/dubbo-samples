@@ -30,7 +30,7 @@
     <dependencies>
         <dependency>
             <groupId>org.apache.dubbo</groupId>
-            <artifactId>dubbo-samples-spring-boot-interface</artifactId>
+            <artifactId>dubbo-samples-spring-boot-api</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
 

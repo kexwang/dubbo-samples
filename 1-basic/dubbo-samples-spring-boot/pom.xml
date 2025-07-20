@@ -45,7 +45,7 @@
     </properties>
 
     <modules>
-        <module>dubbo-samples-spring-boot-interface</module>
+        <module>dubbo-samples-spring-boot-api</module>
         <module>dubbo-samples-spring-boot-provider</module>
         <module>dubbo-samples-spring-boot-consumer</module>
     </modules>
