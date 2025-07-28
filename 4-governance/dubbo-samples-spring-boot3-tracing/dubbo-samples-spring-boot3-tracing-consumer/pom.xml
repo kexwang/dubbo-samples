@@ -32,16 +32,20 @@
             <version>${project.parent.version}</version>
         </dependency>
 
-        <!-- registry dependency -->
-        <dependency>
-            <groupId>com.alibaba.nacos</groupId>
-            <artifactId>nacos-client</artifactId>
-        </dependency>
+<!--        &lt;!&ndash; registry dependency &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba.nacos</groupId>-->
+<!--            <artifactId>nacos-client</artifactId>-->
+<!--        </dependency>-->
 
         <!-- dubbo starter -->
         <dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+          <groupId>org.apache.dubbo</groupId>
+          <artifactId>dubbo-nacos-spring-boot-starter</artifactId>
         </dependency>
 
         <!-- spring starter -->
@@ -55,17 +59,19 @@
             <artifactId>spring-boot-starter-log4j2</artifactId>
         </dependency>
 
-        <!-- Observability -->
-        <dependency>
-            <groupId>org.apache.dubbo</groupId>
-            <artifactId>dubbo-tracing-otel-zipkin-spring-boot-starter</artifactId>
-        </dependency>
-        <!-- zipkin sender -->
-        <dependency>
-            <groupId>io.zipkin.reporter2</groupId>
-            <artifactId>zipkin-sender-urlconnection</artifactId>
-            <version>3.3.0</version>
-        </dependency>
+      <dependency>
+        <groupId>org.apache.dubbo</groupId>
+        <artifactId>dubbo-tracing-otel-zipkin-spring-boot-starter</artifactId>
+      </dependency>
+      <!--    <dependency>-->
+      <!--      <groupId>io.zipkin.reporter2</groupId>-->
+      <!--      <artifactId>zipkin-sender-urlconnection</artifactId>-->
+      <!--      <version>3.3.0</version>-->
+      <!--    </dependency>-->
+      <dependency>
+        <groupId>io.micrometer</groupId>
+        <artifactId>micrometer-core</artifactId>
+      </dependency>
     </dependencies>
 
     <build>

@@ -36,7 +36,7 @@ dubbo:
   tracing:
     enabled: true # default is false
     sampling:
-      probability: 0.5 # sampling rate, default is 0.1
+      probability: 1.0 # sampling rate, default is 0.1
     propagation:
       type: W3C # W3C/B3 default is W3C
     tracing-exporter:
@@ -49,5 +49,5 @@ logging:
   level:
     root: info
   pattern:
-    console: '[%d{dd/MM/yy HH:mm:ss:SSS z}] %t %5p %c{2} [%X{traceId:-}, %X{spanId:-}]: %m%n'
+    console: '[%d{yyyy-MM-dd HH:mm:ss.SSS}] %t %5p %c{2} [${spring.application.name:}, %X{traceId:-}, %X{spanId:-}]: %m%n'
 
