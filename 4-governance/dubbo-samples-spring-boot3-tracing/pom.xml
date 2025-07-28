@@ -50,7 +50,7 @@
         <spring-boot.version>3.2.3</spring-boot.version>
 <!--        <nacos.version>2.2.0</nacos.version>-->
 <!--        <micrometer.version>1.10.6</micrometer.version>-->
-        <micrometer-tracing.version>1.0.5</micrometer-tracing.version>
+<!--        <micrometer-tracing.version>1.0.5</micrometer-tracing.version>-->
         <junit.version>4.13.1</junit.version>
 
         <spring-boot-maven-plugin.version>3.2.3</spring-boot-maven-plugin.version>
@@ -70,13 +70,13 @@
 <!--                <type>pom</type>-->
 <!--                <scope>import</scope>-->
 <!--            </dependency>-->
-            <dependency>
-                <groupId>io.micrometer</groupId>
-                <artifactId>micrometer-tracing-bom</artifactId>
-                <version>${micrometer-tracing.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>io.micrometer</groupId>-->
+<!--                <artifactId>micrometer-tracing-bom</artifactId>-->
+<!--                <version>${micrometer-tracing.version}</version>-->
+<!--                <type>pom</type>-->
+<!--                <scope>import</scope>-->
+<!--            </dependency>-->
 
             <!-- Spring Boot -->
             <dependency>
