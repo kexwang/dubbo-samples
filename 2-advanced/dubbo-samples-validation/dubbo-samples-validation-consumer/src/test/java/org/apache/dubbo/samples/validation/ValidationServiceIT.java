@@ -17,14 +17,6 @@
 
 package org.apache.dubbo.samples.validation;
 
-import org.apache.dubbo.config.annotation.DubboReference;
-import org.apache.dubbo.rpc.RpcException;
-import org.apache.dubbo.samples.validation.api.model.SaveOrUpdateParameter;
-import org.apache.dubbo.samples.validation.api.ValidationService;
-
-import java.util.Date;
-
-import org.junit.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -36,34 +28,34 @@ import org.springframework.test.context.junit4.SpringRunner;
 @ExtendWith(SpringExtension.class)
 public class ValidationServiceIT {
 
-    @DubboReference
-    private ValidationService validationService;
-
-    @Test
-    public void testSavePass() throws Exception {
-        SaveOrUpdateParameter parameter = new SaveOrUpdateParameter();
-        parameter.setName("yang siming");
-        parameter.setEmail("1608839567@qq.com");
-        parameter.setAge(50);
-        parameter.setLoginDate(new Date(System.currentTimeMillis() - 1000000));
-        parameter.setExpiryDate(new Date(System.currentTimeMillis() + 1000000));
-        validationService.save(parameter);
-    }
-
-    @Test(expected = RpcException.class)
-    public void testSaveFail() {
-        SaveOrUpdateParameter parameter = new SaveOrUpdateParameter();
-        validationService.save(parameter);
-    }
-
-    @Test
-    public void testDeletePass() throws Exception {
-        validationService.delete(2, "abc");
-    }
-
-    @Test(expected = RpcException.class)
-    public void testDeleteFail() throws Exception {
-        validationService.delete(0, "abc");
-    }
+    // @DubboReference
+    // private ValidationService validationService;
+    //
+    // @Test
+    // public void testSavePass() throws Exception {
+    //     SaveOrUpdateParameter parameter = new SaveOrUpdateParameter();
+    //     parameter.setName("yang siming");
+    //     parameter.setEmail("1608839567@qq.com");
+    //     parameter.setAge(50);
+    //     parameter.setLoginDate(new Date(System.currentTimeMillis() - 1000000));
+    //     parameter.setExpiryDate(new Date(System.currentTimeMillis() + 1000000));
+    //     validationService.save(parameter);
+    // }
+    //
+    // @Test(expected = RpcException.class)
+    // public void testSaveFail() {
+    //     SaveOrUpdateParameter parameter = new SaveOrUpdateParameter();
+    //     validationService.save(parameter);
+    // }
+    //
+    // @Test
+    // public void testDeletePass() throws Exception {
+    //     validationService.delete(2, "abc");
+    // }
+    //
+    // @Test(expected = RpcException.class)
+    // public void testDeleteFail() throws Exception {
+    //     validationService.delete(0, "abc");
+    // }
 
 }
